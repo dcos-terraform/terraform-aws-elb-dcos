@@ -1,9 +1,9 @@
 variable "cluster_name" {
-  description = "Specify the cluster name all resources get named and tagged with"
+  description = "Cluster name all resources get named and tagged with"
 }
 
 variable "tags" {
-  description = "Add special tags to the resources created by this module"
+  description = "Custom tags added to the resources created by this module"
   type        = "map"
   default     = {}
 }
@@ -39,16 +39,16 @@ variable "public_agent_instances" {
 }
 
 variable "masters_acm_cert_arn" {
-  description = "Specify an ACM certifacte to be used for the masters load balancer"
+  description = "ACM certifacte to be used for the masters load balancer"
   default     = ""
 }
 
 variable "masters_internal_acm_cert_arn" {
-  description = "Specify an ACM certifacte to be used for the internal masters load balancer"
+  description = "ACM certifacte to be used for the internal masters load balancer"
   default     = ""
 }
 
 variable "public_agents_acm_cert_arn" {
-  description = "Specify an ACM certifacte to be used for the public agents load balancer"
+  description = "ACM certifacte to be used for the public agents load balancer"
   default     = ""
 }

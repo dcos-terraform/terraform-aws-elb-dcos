@@ -40,17 +40,17 @@ module "dcos-elbs" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| cluster_name | Specify the cluster name all resources get named and tagged with | string | - | yes |
+| cluster_name | Cluster name all resources get named and tagged with | string | - | yes |
 | master_instances | List of master instance IDs | list | - | yes |
-| masters_acm_cert_arn | Specify an ACM certifacte to be used for the masters load balancer | string | `` | no |
-| masters_internal_acm_cert_arn | Specify an ACM certifacte to be used for the internal masters load balancer | string | `` | no |
+| masters_acm_cert_arn | ACM certifacte to be used for the masters load balancer | string | `` | no |
+| masters_internal_acm_cert_arn | ACM certifacte to be used for the internal masters load balancer | string | `` | no |
 | public_agent_instances | List of public agent instance IDs | list | - | yes |
-| public_agents_acm_cert_arn | Specify an ACM certifacte to be used for the public agents load balancer | string | `` | no |
+| public_agents_acm_cert_arn | ACM certifacte to be used for the public agents load balancer | string | `` | no |
 | security_groups_masters | Security Group IDs to use for external masters load balancer | list | - | yes |
 | security_groups_masters_internal | Security Group IDs to use for external public agents load balancer | list | - | yes |
 | security_groups_public_agents | Security Group IDs to use for external public agents load balancer | list | - | yes |
 | subnet_ids | Subnets to spawn the instances in. The module tries to distribute the instances | list | - | yes |
-| tags | Add special tags to the resources created by this module | map | `<map>` | no |
+| tags | Custom tags added to the resources created by this module | map | `<map>` | no |
 
 ## Outputs
 
