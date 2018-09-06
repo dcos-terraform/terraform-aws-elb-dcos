@@ -20,7 +20,7 @@
  *
  *```hcl
  * module "dcos-elbs" {
- *   source  = "terraform-dcos/elb-dcos/aws"
+ *   source  = "dcos-terraform/elb-dcos/aws"
  *   version = "~> 0.1"
  *
  *   cluster_name = "production"
