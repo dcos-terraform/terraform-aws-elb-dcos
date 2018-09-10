@@ -19,7 +19,7 @@ variable "security_groups_masters" {
 }
 
 variable "security_groups_masters_internal" {
-  description = "Security Group IDs to use for external public agents load balancer"
+  description = "Security Group IDs to use for internal communication to masters"
   type        = "list"
 }
 
