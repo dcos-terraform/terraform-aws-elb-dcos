@@ -55,5 +55,5 @@ variable "public_agents_acm_cert_arn" {
 
 variable "internal" {
   description = "Internal Facing Scheme for elb"
-  default     = ""
+  default     = "false"
 }
