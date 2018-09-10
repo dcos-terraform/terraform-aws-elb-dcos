@@ -19,7 +19,7 @@ EXAMPLE
 
 ```hcl
 module "dcos-elbs" {
-  source  = "terraform-dcos/elb-dcos/aws"
+  source  = "dcos-terraform/elb-dcos/aws"
   version = "~> 0.1"
 
   cluster_name = "production"
@@ -47,7 +47,7 @@ module "dcos-elbs" {
 | public_agent_instances | List of public agent instance IDs | list | - | yes |
 | public_agents_acm_cert_arn | ACM certifacte to be used for the public agents load balancer | string | `` | no |
 | security_groups_masters | Security Group IDs to use for external masters load balancer | list | - | yes |
-| security_groups_masters_internal | Security Group IDs to use for external public agents load balancer | list | - | yes |
+| security_groups_masters_internal | Security Group IDs to use for internal communication to masters | list | - | yes |
 | security_groups_public_agents | Security Group IDs to use for external public agents load balancer | list | - | yes |
 | subnet_ids | Subnets to spawn the instances in. The module tries to distribute the instances | list | - | yes |
 | tags | Custom tags added to the resources created by this module | map | `<map>` | no |
@@ -57,6 +57,6 @@ module "dcos-elbs" {
 | Name | Description |
 |------|-------------|
 | masters_dns_name | DNS Name of the master load balancer |
-| masters_internal_dns_name | DNS Name of the master load balancer |
+| masters_internal_dns_name | DNS Name of the internal master load balancer |
 | public_agents_dns_name | DNS Name of the public agent load balancer |
 
