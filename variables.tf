@@ -52,3 +52,8 @@ variable "public_agents_acm_cert_arn" {
   description = "ACM certifacte to be used for the public agents load balancer"
   default     = ""
 }
+
+variable "internal" {
+  description = "Internal Facing Scheme for elb"
+  default     = "false"
+}

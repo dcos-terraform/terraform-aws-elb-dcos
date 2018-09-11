@@ -52,6 +52,7 @@ module "dcos-elb-masters" {
   security_groups    = ["${var.security_groups_masters}"]
   instances          = ["${var.master_instances}"]
   https_acm_cert_arn = "${var.masters_acm_cert_arn}"
+  internal           = "${var.internal}"
 
   tags = "${var.tags}"
 }
@@ -86,6 +87,7 @@ module "dcos-elb-public-agents" {
   security_groups    = ["${var.security_groups_public_agents}"]
   instances          = ["${var.public_agent_instances}"]
   https_acm_cert_arn = "${var.public_agents_acm_cert_arn}"
+  internal           = "${var.internal}"
 
   tags = "${var.tags}"
 }
