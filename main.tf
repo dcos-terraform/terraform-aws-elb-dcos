@@ -70,7 +70,6 @@ module "dcos-elb-masters-internal" {
   security_groups    = ["${var.security_groups_masters_internal}"]
   instances          = ["${var.master_instances}"]
   https_acm_cert_arn = "${var.masters_internal_acm_cert_arn}"
-  internal           = "${var.internal}"
 
   tags = "${var.tags}"
 }
