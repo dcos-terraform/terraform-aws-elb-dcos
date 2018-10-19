@@ -41,7 +41,7 @@ provider "aws" {}
 
 module "dcos-elb-masters" {
   source  = "dcos-terraform/elb-masters/aws"
-  version = "~> 0.0"
+  version = "~> 0.1"
 
   providers = {
     aws = "aws"
@@ -59,7 +59,7 @@ module "dcos-elb-masters" {
 
 module "dcos-elb-masters-internal" {
   source  = "dcos-terraform/elb-masters-internal/aws"
-  version = "~> 0.0"
+  version = "~> 0.1"
 
   providers = {
     aws = "aws"
@@ -76,7 +76,7 @@ module "dcos-elb-masters-internal" {
 
 module "dcos-elb-public-agents" {
   source  = "dcos-terraform/elb-public-agents/aws"
-  version = "~> 0.0"
+  version = "~> 0.1"
 
   providers = {
     aws = "aws"
