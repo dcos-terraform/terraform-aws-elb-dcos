@@ -35,29 +35,28 @@ module "dcos-elbs" {
 }
 ```
 
-
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| cluster_name | Name of the DC/OS cluster | string | - | yes |
-| internal | This ELB is internal only | string | `false` | no |
-| master_instances | List of master instance IDs | list | - | yes |
-| masters_acm_cert_arn | ACM certifacte to be used for the masters load balancer | string | `` | no |
-| masters_internal_acm_cert_arn | ACM certifacte to be used for the internal masters load balancer | string | `` | no |
-| public_agent_instances | List of public agent instance IDs | list | - | yes |
-| public_agents_acm_cert_arn | ACM certifacte to be used for the public agents load balancer | string | `` | no |
-| security_groups_masters | Security Group IDs to use for external masters load balancer | list | - | yes |
-| security_groups_masters_internal | Security Group IDs to use for internal communication to masters | list | - | yes |
-| security_groups_public_agents | Security Group IDs to use for external public agents load balancer | list | - | yes |
-| subnet_ids | List of subnet IDs created in this network | list | - | yes |
+| cluster\_name | Name of the DC/OS cluster | string | n/a | yes |
+| master\_instances | List of master instance IDs | list | n/a | yes |
+| public\_agent\_instances | List of public agent instance IDs | list | n/a | yes |
+| security\_groups\_masters | Security Group IDs to use for external masters load balancer | list | n/a | yes |
+| security\_groups\_masters\_internal | Security Group IDs to use for internal communication to masters | list | n/a | yes |
+| security\_groups\_public\_agents | Security Group IDs to use for external public agents load balancer | list | n/a | yes |
+| subnet\_ids | List of subnet IDs created in this network | list | n/a | yes |
+| internal | This ELB is internal only | string | `"false"` | no |
+| masters\_acm\_cert\_arn | ACM certifacte to be used for the masters load balancer | string | `""` | no |
+| masters\_internal\_acm\_cert\_arn | ACM certifacte to be used for the internal masters load balancer | string | `""` | no |
+| public\_agents\_acm\_cert\_arn | ACM certifacte to be used for the public agents load balancer | string | `""` | no |
 | tags | Add custom tags to all resources | map | `<map>` | no |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| masters_dns_name | DNS Name of the master load balancer |
-| masters_internal_dns_name | DNS Name of the master load balancer |
-| public_agents_dns_name | DNS Name of the public agent load balancer |
+| masters\_dns\_name | DNS Name of the master load balancer |
+| masters\_internal\_dns\_name | DNS Name of the master load balancer |
+| public\_agents\_dns\_name | DNS Name of the public agent load balancer |
 
